@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+    <style>
+        :root{
+            --primary-color:steelblue;
+            --secondary-color:red;
+            --font-size:30px;
+        }
+        h1{
+            color:var(--primary-color);
+        }
+        h5{
+            color: var(--primary-color);
+            font-size: var(--font-size);
+        }
+        .box{
+            border: 2px solid var(--primary-color);
+            width: calc(100% - 300px);
+        }
+        .box p{
+            color: var(--primary-color);
+        }
+        .sidebar{
+            background-color:lightgray ;
+        }
+        .container{
+            display: grid;
+            gap: 20px;
+            background-color: lightskyblue;
+            grid-template-rows: 500px;
+            grid-template-columns: 200px calc(100% - 200px -20px);
+        }
+    </style>
+</head>
+<body>
+    <h1>My Customer Properties</h1>
+    <h5>
+        Also commonly known as CSS variables
+    </h5>
+    <div class="box">
+        <h3>I am doing something</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, pariatur. Officiis sed veniam magni harum temporibus accusantium, quia eius libero pariatur repudiandae alias nam! Amet laborum earum ipsam labore provident corporis, nobis, ratione voluptate explicabo nisi fugiat ducimus! Ratione deserunt accusamus inventore repudiandae est fugiat libero doloribus fuga amet? Magnam, explicabo! Ab repellendus aspernatur rem quaerat adipisci rerum voluptas, assumenda soluta necessitatibus corporis itaque at incidunt ex? Repudiandae molestiae doloremque, quod tenetur ipsam molestias nihil autem obcaecati quas voluptatem natus ex sint suscipit, hic earum provident. Officiis beatae eum quia.</p>
+    </div>
+    <div class="container">
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Main Content</div>
+    </div>
+</body>
+</html>
